@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Navathej Profile</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .profile-pic {
+      background-color: #f5f5f5;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .profile-pic img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #ddd;
+    }
+
+    .info {
+      flex: 2;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #333;
+    }
+
+    .info p {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .social-links {
+      margin: 15px 0;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      font-size: 24px;
+      margin-right: 15px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .fa-instagram {
+      color: #e4405f;
+    }
+
+    .fa-facebook {
+      color: #3b5998;
+    }
+
+    .fa-github {
+      color: #000;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-pic,
+      .info {
+        flex: none;
+        width: 100%;
+      }
+
+      .profile-pic {
+        padding: 30px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-pic">
+      <img src="/image.jfif" alt="Navathej Annam" />
+    </div>
+    <div class="info">
+      <h1>Navathej Annam</h1>
+      <p><strong>Location:</strong> Hyderabad, Telangana</p>
+      <p><strong>Contact:</strong> <a href="tel:+919502177143">+91 9502177143</a></p>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/annamthej?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.facebook.com/annam.navathej" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://github.com/thej950" target="_blank"><i class="fa fa-github"></i></a>
+      </div>
+
+      <div class="buttons">
+        <a href="tel:+919502177143">Call Me</a>
+        <a href="https://drive.google.com/file/d/175LwbYt6P50ie0ojXzvsIyiqJ_ChLleT/view?usp=sharing" target="_blank">View Resume</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

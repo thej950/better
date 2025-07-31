@@ -12,6 +12,8 @@ jobs:
           node-version: '18'
       - run: npm install
       - run: npm test
+      - name: login dokcerhub
+        run: echo "${{ secrets.REGISTRY_PSWD }}" | docker login -u "${{ secrets.REGISTRY }}" --password-stdin
       - name: Build Docker image
         run: docker build -t ${{ secrets.REGISTRY }}/better-app .  
       - name: login dokcerhub

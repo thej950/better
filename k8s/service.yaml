@@ -9,5 +9,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80           # Service port (external)
-      targetPort: 8001   # Container port (internal)
+      targetPort: 3000   # Container port (internal)
   type: LoadBalancer     # For AWS ELB

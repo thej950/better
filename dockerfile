@@ -1,14 +1,25 @@
-FROM golang:1.24-alpine AS builder
+# ----------- Stage 1: Build Stage -------------
+FROM node:18 AS builder
 
 WORKDIR /app
+
+# Copy source files
 COPY . .
 
-RUN go build -o main main.go
-FROM alpine:latest
+# Initialize package.json and install dependencies
+RUN npm init -y && \
+    npm install express
+
+# ----------- Stage 2: Runtime Stage (Alpine) -------------
+FROM node:18-alpine
 
 WORKDIR /app
-RUN apk add --no-cache curl
-COPY --from=builder /app/main .
 
-EXPOSE 8001
-CMD ["./main"]
+# Copy only necessary files from the builder
+COPY --from=builder /app /app
+
+# Expose app port
+EXPOSE 3000
+
+# Start the application
+CMD ["node", "server.js"]
