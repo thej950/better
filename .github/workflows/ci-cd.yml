@@ -13,4 +13,5 @@ jobs:
       - run: npm install
       - run: npm test
       - name: Build Docker image
-        run: docker build -t ${{ secrets.REGISTRY }}/myapp:${{ github.sha }} .
+        run: docker build -t ${{ secrets.REGISTRY }}/myapp:${{ github.sha }} .; ls -l
+        
