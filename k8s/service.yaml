@@ -8,6 +8,6 @@ spec:
     app: better
   ports:
     - protocol: TCP
-      port: 80           # Service port (external)
-      targetPort: 3000   # Container port (internal)
+      port: 80           
+      targetPort: 3000   
   type: LoadBalancer     # For AWS ELB

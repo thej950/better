@@ -3,7 +3,7 @@ FROM node:18 AS builder
 
 WORKDIR /app
 
-# Copy source files
+# Copy source files 
 COPY . .
 
 # Initialize package.json and install dependencies
