@@ -18,7 +18,3 @@ jobs:
         run: echo "${{ secrets.REGISTRY_PSWD }}" | docker login -u "${{ secrets.REGISTRY }}" --password-stdin
       - name: push image to dokcerhub
         run: docker push ${{ secrets.REGISTRY }}/better-app
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v3
-      - name: Deploy to Kubernetes
-        run: kubectl apply -f k8s/   
