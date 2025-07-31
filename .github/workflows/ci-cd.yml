@@ -14,5 +14,7 @@ jobs:
       - run: npm test
       - name: Build Docker image
         run: docker build -t ${{ secrets.REGISTRY }}/better-app .  
+      - name: login dokcerhub
+        run: echo "${{ secrets.REGISTRY_PSWD }}" | docker login -u "${{ secrets.REGISTRY }}" --password-stdin
       - name: push image to dokcerhub
         run: docker push ${{ secrets.REGISTRY }}/better-app    
