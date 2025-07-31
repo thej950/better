@@ -1,0 +1,14 @@
+{
+  "name": "better",
+  "version": "1.0.0",
+  "description": "A demo Node.js app for CI/CD example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
