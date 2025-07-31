@@ -19,4 +19,6 @@ jobs:
       - name: push image to dokcerhub
         run: docker push ${{ secrets.REGISTRY }}/better-app
       - name: Set up kubectl
-        uses: azure/setup-kubectl@v3    
+        uses: azure/setup-kubectl@v3
+      - name: Deploy to Kubernetes
+        run: kubectl apply -f k8s/   
