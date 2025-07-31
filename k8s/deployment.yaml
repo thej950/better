@@ -18,4 +18,4 @@ spec:
         - name: better-container
           image: navathej408/better-app:latest   # Use tag explicitly
           ports:
-            - containerPort: 3000
+            - containerPort: 8001
