@@ -17,4 +17,6 @@ jobs:
       - name: login dokcerhub
         run: echo "${{ secrets.REGISTRY_PSWD }}" | docker login -u "${{ secrets.REGISTRY }}" --password-stdin
       - name: push image to dokcerhub
-        run: docker push ${{ secrets.REGISTRY }}/better-app    
+        run: docker push ${{ secrets.REGISTRY }}/better-app
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3    
